@@ -1,0 +1,36 @@
+{{include './header.html' }}
+<section>
+ <div class="archive">
+     <h1>存档</h1>
+{{each msgs s}}
+{{if s.time.year!=lastYear}}
+<h1>{{lastYear = s.time.year}}</h1>
+{{/if}}
+<p> {{s.time.sec}}  <span><a href="/view?_id={{s._id}}">{{s.title}}</a></span></p>
+
+<br>
+
+
+{{/each}}
+
+<div id="page">
+        {{if page!=1}}
+        <a href="/archive?page={{page-1}}" style="color: black">上一页</a>
+        {{/if}}
+
+        <span style="color: black">第{{page}}/{{allPages}}页</span>
+
+        {{if page==allPages}}
+       <a href="/archive?page={{page+1}}" style="display: none">下一页</a>
+
+       {{else}}
+       <a href="/archive?page={{page+1}}" style="color: black;">下一页</a>
+
+        {{/if}}
+    </div>
+ </div>
+
+</section>
+</body>
+
+</html>

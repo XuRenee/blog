@@ -1,0 +1,56 @@
+{{include './header.html' }}
+<style>
+.head-img{
+    width: 100px;
+    height: 100px;
+    margin-top: 70px;
+    position: relative;
+
+}
+.edit-btn{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+.head-img:hover .edit-btn{
+display: block;
+}
+button{
+ margin-top: 80px;
+}
+</style>
+<section>
+<div class="head">
+    <form action="/uploads" method="POST" enctype="multipart/form-data">
+        <div class="head-img">
+
+            <img src="{{user.headerurl}}" alt="" class="head-img">        
+            <span class="edit-btn">选择头像</span>
+            <input type="file" name="header" id="headerimg"hidden>
+
+        </div>
+<button type="submit">修改</button>
+
+
+    </form>
+    </div>
+
+    <script>
+
+   var span=document.querySelector('.edit-btn')
+    span.onclick=function(){
+        document.querySelector('#headerimg').click()
+    }
+var head= document.querySelector('#headerimg')
+   head.onchange=function(){
+        var file=this.files[0]
+        document.querySelector('.head-img').src=URL.createObjectURL(file)
+    }
+    </script>

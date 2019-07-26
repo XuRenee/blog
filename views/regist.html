@@ -1,0 +1,23 @@
+{{include './header.html' }}
+    <section>
+        <div class="box">
+            <h1>注册</h1>
+            <form action="/regist" method="post">
+            <label>&#x3000用户名:&#x3000;<input type="text" name='username' required></label><br>
+            <label>&#x3000&#x3000密码:&#x3000;<input type="text" name='password' required></label>
+            <label>确认密码:&#x3000;<input type="text" name='confirm'required></label>
+            <label>电子邮箱:&#x3000;<input type="text" name='email'required></label>
+
+           
+
+
+            <button class="btn" type="submit">注册</button><br>
+            {{error}}
+        </form>
+        </div>
+
+
+    </section>
+</body>
+
+</html>

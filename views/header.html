@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-box">
+            <div class="left">
+                <h1 class="h1">BLOG</h1>
+                <ul>
+                    <a href="/">
+                        <li>首页 </li>
+                    </a>
+                    <a href="/archive">
+                        <li>存档</li>
+                    </a>
+                    <a href="/lable">
+                        <li>标签</li>
+                    </a>
+                    <a href="/release">
+                        <li>发布</li>
+                    </a>
+                </ul>
+            </div>
+           
+            <div class="right">
+                    <form action="/sou" method="POST">
+                        <input type="text" name="keyWord" class="sou">
+                        
+                    </form>
+                <ul>
+                    {{if user}}
+                   
+                <li class="header"><a href="/edit/userinfo"><img src="{{user.headerurl}}" alt=""> </a> </li>
+           
+               
+                 
+                    <a href="/aut">
+                        <li>Hi~{{user.username}}欢迎登陆</li>
+                    </a>
+                    <a href="/logout">
+                        <li>&#x3000;&#x3000;退出登录</li>
+                    </a>
+                    {{else}}
+                    <a href="/login">
+                        <li>登录</li>
+                    </a>
+                    <a href="/regist">
+                        <li>注册</li>
+                    </a>
+                    {{/if}}
+
+
+                </ul>
+            </div>
+          
+        </div>
+    </nav>

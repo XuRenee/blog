@@ -1,0 +1,37 @@
+{{include './header.html' }}
+<section>
+       
+        <div class="update">
+                <h1 class="h11">修改你的动态</h1>
+                <form action="/update" method="POST">
+                    <input type="hidden" name="_id" value="{{msgs._id}}">
+                   
+                    <label class="lable">标题：&#x3000;<input type="text" name="title" required disabled value="{{msgs.title}}"></label><br>
+                    <label class="lable" >标签：&#x3000;
+                  {{each msgs.label s}}
+                        <input type="text" name="label" disabled value="{{s}}">
+                        {{/each}}
+
+                    
+                  
+                    </label><br>
+                    <label class="lable">内容：&#x3000; <br>
+                        <textarea name="content" cols="30" rows="10" class="content" required></textarea>
+                    </label>
+                    <br>
+                    <button type="submit" class="btn">提交</button>
+                </form>
+        </div>
+
+
+
+
+ 
+
+
+
+
+</section>
+</body>
+
+</html>

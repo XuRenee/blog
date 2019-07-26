@@ -1,0 +1,29 @@
+{{include './header.html' }}
+<section class="session">
+    <div class="sess-box1">
+        <h1 class="h11">发布你的动态</h1>
+        <form action="/release" method="post">
+            <label class="lable">标题：&#x3000;<input type="text" name="title"></label><br>
+            <label class="lable">标签：&#x3000;
+                <input type="text" name="label">
+                <input type="text" name="label">
+                <input type="text" name="label">
+            </label><br>
+            <label class="lable">内容：&#x3000; <br>
+                <textarea name="content" cols="30" rows="10" class="content"></textarea>
+            </label>
+            <br>
+            <button type="submit" class="btn">提交</button>
+            <br>{{error}}
+
+
+
+
+
+
+        </form>
+    </div>
+</section>
+</body>
+
+</html>

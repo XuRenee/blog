@@ -1,0 +1,42 @@
+{{include './header.html' }}
+<section>
+  <div class='aut-box'>
+    <div class="author">
+      <img src="/img/憨狗.jpeg" alt="" class="gg">
+      {{if user}}
+      <h1 class="gr">{{user.username}}的个人空间 </h1><br>
+
+      {{/if}}
+      {{if msg!=''}}
+      
+{{each msg m}}
+<div class="aut-zy">
+  <h1><a href="/view?_id={{m._id}}">{{m.title}}</a> </h1>
+  <p>作者：{{user.username}} | 日期: {{m.time.sec}} | 标签：
+{{each m.label m}}
+<a href="/label/search?label={{m}}"> {{m}}</a>
+
+  {{/each}}
+  </p>
+  <p>{{m.content}}</p>
+
+
+
+</div>
+      
+
+      
+{{/each}}
+      {{else}}
+      <p>还没有发布内容</p>
+      {{/if}}
+
+
+
+
+    </div>
+  </div>
+</section>
+</body>
+
+</html>

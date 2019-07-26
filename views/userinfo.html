@@ -1,0 +1,24 @@
+{{include './header.html' }}
+<style>
+    .head-div{
+        width: 1200px;
+        margin: 70px auto;
+    }
+    .head-imgs{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<div class="head-div">
+<form action="/edit/userinfo" method="POST" >
+    <span>头像：</span>
+    <div class="header-img">
+        <img src="{{user.headerurl}}" alt="" class="head-imgs">
+        <a class="edit-btn" href="/edit/user/header/{{user.username}}">编辑头像</a>
+    </div>
+</form>
+</div>
+
+</body>
+
+</html>

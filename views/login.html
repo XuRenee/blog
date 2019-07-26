@@ -1,0 +1,18 @@
+{{include './header.html' }}
+    <section>
+        <div class="box">
+            <h1>登录</h1>
+            <form action="/login" method="post">
+            <label>账户:&#x3000;<input type="text" name='username' required></label><br>
+            <label>密码:&#x3000;<input type="text" name='password' required></label>
+            <button class="btn" type="submit">登录</button><br>
+            {{error}}
+        </form>
+
+        </div>
+
+
+    </section>
+</body>
+
+</html>

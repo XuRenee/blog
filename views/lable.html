@@ -1,0 +1,39 @@
+{{include './header.html' }}
+<section>
+    <div class="archive">
+        <h1>全部标签</h1>
+
+        {{each array arr}}
+        <a href="/label/search?label={{arr}}">{{ arr }}</a><br>
+        {{/each}}
+
+
+
+
+
+
+
+        {{each msg m}}
+      <h1>{{m.time.year}}年</h1>  
+        <div class="label-div">
+           <h1><a href="/view?_id={{m._id}}">{{m.title}}</a></h1> 
+           <p>作者：<a href="/author?author_id={{m.author._id}}">{{m.author.username}}</a> | 发布于{{m.time.sec}} |  标签：
+               {{each m.label l}}
+            <span>
+
+            {{l}}
+           </span>
+        {{/each}}</p>
+
+
+           <p>{{m.content}}</p>
+
+        </div>
+      
+        {{/each}}
+    </div>
+
+</section>
+</body>
+
+</html>

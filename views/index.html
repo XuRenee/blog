@@ -1,0 +1,75 @@
+{{include './header.html' }}
+<section class="session">
+
+
+    <div class="sess-box">
+        <div class="back">
+            <img src="/img/time.jpeg" alt="" class="img">
+            <div class="back-div">
+
+                {{if user}}
+                <img src="/img/头像.jpg" alt="">
+                <p class="fon">{{user.username}}的个人空间</p>
+                {{else}}
+                <img src="/img/2h.jpg " alt="">
+
+                <p class="fon">你咋不登录呢？</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <!-- 信息 -->
+        <div class="b-b">
+            <div class="s-le">
+                <div class="hot">
+                    <h4>热搜榜</h4>
+                 
+                    {{each msgs m}}
+                    <form action="/view?id={{m.title}}" method="GET">
+                    <input type="text" name="_id" value="{{m._id}}" style="display: none">
+                   <button type="submit" class="btn4">{{m.title}}</button>  <br>
+                </form>
+                   {{/each}}
+                </div>
+            </div>
+            <div class="s-ri">
+                {{each msgs m}}
+                <div class="information">
+
+                    <form action="/view" method="get">
+                        <input type="text" value="{{m._id}}" name='_id' style="display: none">
+                        <button type="submit" class="btn1">  <h2 class="h2"> {{m.title}}</h2></button>
+                    </form>
+
+                    <form action="/author" method="GET">
+                        <input type="text" name="author_id" value="{{m.author._id}}" style="display: none">
+                    <p class="inf-p"><span>作者:&#x3000;</span><button type="submit" class="btn1" style="color: #FFC107; font-size: 18px;font-weight: 600;"> {{m.author.username}}</button>&nbsp;
+                        |&nbsp;<span>日期:&nbsp;</span>{{m.time.sec}}&nbsp; | &nbsp;    标签：
+                        {{each m.label b}}
+                    
+                        <span>
+                          <a href="label/search?label={{b}}">{{b}}</a>      
+                        </span> 
+                    {{/each}}
+                    </p>
+                    </form>
+                    <div class="con">
+                      <a href="/view?_id={{m._id}}">{{m.content}}</a>  
+                    </div>
+                    <div class="pp">
+                        <p class="yd">阅读: {{m.count}}次</p>
+                        <p>评论：{{m.reply.length}}条</p>
+                    </div>
+                </div>
+                {{/each}}
+                {{include './page.html' }}
+
+
+
+
+        </div>
+
+</section>
+</body>
+
+</html>

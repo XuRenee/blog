@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+color: #718093;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+body{
+    background-image: url('../img/bg4.jpeg');
+    background-size:cover; 
+
+}
+nav{
+    background-color:white;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    box-shadow:0px 5px 5px 0px #00000024;
+}
+.left{
+display: flex;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+}
+.nav-box{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;  
+    justify-content: space-between;
+
+}
+.h1{
+    display: inline-block;
+    font-size: 30px;
+    color: black;
+}
+section{
+    width: 1200px;
+    height:auto;
+    margin: 0 auto;  
+
+}
+.left ul{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    line-height: 60px;
+    font-size: 18px;
+    color: white;
+    margin-left: 50px;
+}
+.left li{
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    width: 90px;
+    height: 60px;
+}
+
+.ll{
+    background-color: #ecf0f1ab;
+    color: #1e272e;
+}
+.right{
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.right a{
+    color: black;
+}
+.right li{
+text-align: center;
+margin-left: 10px;
+}
+.box{
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 400px;
+    height: 400px;
+    margin:  200px auto;
+text-align: center;
+background-color: white;
+
+}
+.box input:not(.che){
+width: 300px;
+height: 35px;
+border: 1px solid black;
+margin-top: 30px;
+}
+label{
+    font-weight: 700;
+    color: #1e272e;
+}
+.btn{
+width: 350px;
+height: 40px;
+border: none;
+margin-top: 50px;
+display: block;
+    background-color: #FFC107;
+    
+}
+.session{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.user{
+    width: 300px;
+    height: 400px;
+    background-color: #FBC02D;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+.sess-box{
+    width: 1200px;
+    height: auto;
+
+    margin: 60px auto;
+position: relative;
+
+}
+.sess-box img{
+    height: 400px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.back-div{
+    position: absolute;
+width: 300px;
+height: 200px;
+left: 450px;
+top: 220px;
+/* background-color: #FBC02D; */
+text-align: center;
+}
+.back-div img{
+    margin: 0 auto;
+display: block;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+}
+.fon{
+    text-shadow: 2px 1px 2px #1b1a1a;;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.hot{
+    width: 260px;
+    height: 315px;
+    top: 470px;
+    left: 100px;
+    background-color:white;
+    color: #1e272e;
+}
+.hot h4{
+margin-left: 20px;
+margin-top: 20px;
+display: inline-block;
+}
+.hot button{
+margin-left: 20px;
+margin-top: 20px;
+color: #718093;
+}
+/* text-overflow: ellipsis; */
+.b-b{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.information{
+    width: 917px;
+    height: 245px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-top: 20px;
+    background-color: white;
+    position: relative;
+}
+textarea{
+    resize: none;
+}
+.content{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+}
+.sbfj{
+
+    margin-top: 80px;
+}
+.lable{
+    color: #1e272e;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.lable input{
+    height: 25px;
+    margin-top: 10px;
+
+}
+.h11{
+    color: #1e272e;
+    margin: 20px;
+}
+.sess-box1{
+    width: 1200px;
+    height: auto;
+    background-color: white;
+    margin: 90px auto;
+    padding: 30px;
+position: relative;
+}
+.btn{
+    width: 200px;
+    height: 30px;
+    color: white;
+    background-color: #FFC107;
+    border: none;
+margin: 40px auto;
+}
+.h2{
+    margin-left: 20px;
+    color: #718093;
+    margin-bottom: 20px;
+}
+.h2 a{
+color: #718093;
+}
+.inf-p span{
+    color: #1e272e;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.inf-p{
+    color: #718093;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    width: 80%;
+    height: 40px;
+    border-bottom: 2px dashed #1e272e;
+    margin-bottom: 20px;
+}
+.con{
+    margin-left: 20px;
+    font-size: 18px;
+
+    color: #718093;
+    white-space: nowrap;
+    width: 700px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.pp{
+    position: absolute;
+    bottom: 0;
+    margin-left: 20px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* view */
+.view{
+    width: 1200px;
+    height: auto;
+    background-color: white;
+    margin-top: 90px;
+    padding-top: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+.btn1{
+    background-color: transparent;
+    border: none;
+    color: #718093;
+}
+.btn1:focus{
+outline: none;
+}
+.view h1{
+    height: 50px;
+    color: #1e272e;
+}
+.aut span{
+color: #1e272e;
+font-size: 18px;
+font-weight: 600;
+}
+.aut{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;   
+}
+.bs{
+    width: 200px;
+    display: flex;
+    color: #1e272e;
+}
+.bs p{
+    margin-left: 10px;
+}
+.view-text{
+margin-bottom: 20px;
+   
+}
+.txt{
+    width: 500px;
+    height: 100px;
+}
+/* author */
+.author{
+    margin-top: 60px;
+  
+}
+.author h1{
+    color: black;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.aut-box{
+    margin: 60px auto;
+    background-color: white;
+    height: auto;
+padding-left: 20px;
+}
+.gg{
+    margin-top: 20px;
+    display: block;
+    width: 200px;
+    height: 250px;
+    display:inline-block;
+  
+}
+
+/* 编辑 评论 删除 */
+.btn2{
+    background-color: transparent;
+    border: none;
+    color: #1e272e;
+  font-size: 17px;
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 10px;
+}
+.reply{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+.reply-hf{
+    margin: 0 auto;
+    width: 1180px;
+    height: 100px;
+}
+.reply-div{
+    width: 1200px;
+    height: 100px;
+    background-color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 2px dotted #333333;
+   padding-top: 10px;
+}
+.repl-sp{
+    color: #1e272e;
+}
+.archive{
+    width: 1200px;
+    margin: 60px auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    height: auto;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.archive p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+.archive p span{
+    color: #718093;
+}
+.btn4{
+    background-color: transparent;
+    border: none;
+}
+.archive a{
+    color: #718093;
+}
+.sou{
+    width: 200px;
+    right: 50px;
+   top: 10px;
+    height: 35px;
+    position: fixed;
+
+}
+.soulb{
+    width: 1200px;
+    height: auto;
+    background-color: white;
+    margin-top: 80px;
+}
+.aut-zy{
+    width: 600px;
+    height: 200px;
+}
+.aut-zy h1{
+    margin: 0;
+}
+.author-zy{
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 1140px;
+    height: 150px;
+    border: 1px dotted black;
+}
+.author-zy h1{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.author-zy-p2{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.label-div h1{
+    color: #718093;
+}
+.label-div {
+    margin-top: 20px;
+    width: 1180px;
+    padding-top: 20px;
+    border: 1px solid black;
+    height: 150px;
+}
+.soulb-div{
+    width: 1180px;
+    height: 200px;
+    padding:20px;
+}
+.soulb-div h1{
+    color: #718093;
+}
+.soulb-div-p{
+    margin-top: 20px;
+    width: 1160px;
+    height: 100px;
+    border: 1px solid black;
+}
+.header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1b1a1a;
+    display: inline-block;
+}

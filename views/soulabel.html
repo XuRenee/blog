@@ -1,0 +1,26 @@
+{{include './header.html' }}
+<section>
+
+    <div class="soulb">
+        {{each msgs d}}
+        <div class='soulb-div'>
+            <h1>{{d.title}}</h1>
+
+            <p>作者：<a href="/author?author_id={{d.author._id}}">{{d.author.username}}</a>  |发布时间： {{d.time.sec}} | 标签：
+                
+                {{each d.label b}}
+                {{b}}
+                {{/each}}
+            </p>
+            <p class="soulb-div-p">{{d.content}}</p>
+
+        </div>
+        {{/each}}
+
+        {{error}}
+    </div>
+
+</section>
+</body>
+
+</html>
